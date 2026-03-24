@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakeside Fulfillment | Austin, TX | 3PL Fulfillment Services</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { width: 100%; overflow-x: hidden; scroll-behavior: smooth; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: #0B1D3A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --lake-deep: #0B1D3A;
+  --lake-mid: #143A6B;
+  --lake-light: #1E5AA0;
+  --lake-accent: #3BB4E5;
+  --lake-glow: #6DD5F5;
+  --sand: #F5EDE3;
+  --sand-light: #FBF7F2;
+  --warm-white: #FEFCFA;
+  --copper: #C47A3A;
+  --copper-light: #E8A65D;
+  --text-dark: #1A1A2E;
+  --text-mid: #4A4A5A;
+  --text-light: #7A7A8A;
+  --success: #2ECC71;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 8px rgba(11,29,58,0.08);
+  --shadow-md: 0 8px 32px rgba(11,29,58,0.12);
+  --shadow-lg: 0 16px 64px rgba(11,29,58,0.16);
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  width: 100%;
+  padding: 18px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+}
+nav::after {
+  content: '';
+  position: absolute; bottom: -30px; left: 0; right: 0; height: 30px;
+  background: linear-gradient(to bottom, var(--nav-blend-color, #0B1D3A), transparent);
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+nav.scrolled {
+  padding: 14px 48px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: white;
+  transition: color 0.3s;
+  position: relative;
+  padding: 6px 16px 6px 10px;
+}
+.nav-logo::before {
+  content: '';
+  position: absolute;
+  inset: -8px -14px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%);
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(8px);
+  pointer-events: none;
+}
+nav.scrolled .nav-logo { color: white; }
+.nav-logo svg { width: 40px; height: 40px; }
+.nav-logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.5px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  color: var(--nav-text-color, rgba(255,255,255,0.9)); text-decoration: none;
+  font-size: 15px; font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+nav.scrolled .nav-links a { color: var(--nav-text-color, rgba(255,255,255,0.9)); }
+nav.scrolled .nav-links a:hover { color: white; }
+.nav-links a:hover { color: white; }
+.nav-cta {
+  background: var(--lake-accent) !important;
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600 !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(59,180,229,0.4); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  margin: 0;
+  border-radius: 0 !important;
+  background: linear-gradient(165deg, var(--lake-deep) 0%, var(--lake-mid) 40%, var(--lake-light) 100%);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 160px 48px 80px;
+}
+section, footer { border-radius: 0 !important; }
+.hero::before {
+  content: '';
+  position: absolute; top: -50%; right: -20%; width: 80%; height: 200%;
+  background: radial-gradient(ellipse, rgba(59,180,229,0.15) 0%, transparent 60%);
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+@keyframes heroGlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5%, 5%) scale(1.1); }
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+  background: linear-gradient(to top, var(--warm-white), transparent);
+  z-index: 1;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; max-width: 1300px; margin: 0 auto;
+  position: relative; z-index: 2; width: 100%;
+}
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(59,180,229,0.15); border: 1px solid rgba(59,180,229,0.3);
+  padding: 8px 18px; border-radius: 50px;
+  font-size: 13px; font-weight: 600; color: var(--lake-glow);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  width: fit-content; margin-bottom: 28px;
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+.hero-badge::before {
+  content: ''; width: 8px; height: 8px;
+  background: var(--lake-glow); border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 4.5vw, 64px);
+  line-height: 1.1; color: white;
+  font-weight: 700; letter-spacing: -1px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease-out 0.4s both;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--lake-glow);
+}
+.hero-desc {
+  font-size: 18px; line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+  max-width: 520px; margin-bottom: 40px;
+  animation: fadeUp 0.8s ease-out 0.6s both;
+}
+.hero-actions {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  animation: fadeUp 0.8s ease-out 0.8s both;
+}
+.btn-primary {
+  padding: 16px 36px; border-radius: 50px;
+  background: var(--lake-accent); color: white;
+  font-size: 16px; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--lake-glow); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,180,229,0.35); }
+.btn-secondary {
+  padding: 16px 36px; border-radius: 50px;
+  background: transparent; color: white;
+  font-size: 16px; font-weight: 500;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  cursor: pointer; transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeUp 1s ease-out 0.6s both;
+}
+.hero-card-stack { position: relative; width: 100%; max-width: 480px; }
+.hero-float-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg); padding: 28px;
+  position: relative;
+  z-index: 1;
+}
+.hero-float-card h3 {
+  color: white; font-size: 18px; font-weight: 600; margin-bottom: 20px;
+}
+.hero-stat-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius); padding: 16px; text-align: center;
+}
+.hero-stat .num { font-size: 28px; font-weight: 700; color: var(--lake-glow); }
+.hero-stat .label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 4px; display: flex; justify-content: center; gap: 0; }
+.hero-stat .label .wave-char {
+  display: inline-block;
+  animation: labelWave 3s ease-in-out infinite;
+  animation-delay: var(--wave-delay, 0s);
+}
+.hero-stat .label .wave-space { width: 4px; }
+@keyframes labelWave {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-3px); }
+  40% { transform: translateY(0); }
+}
+
+/* Hero title wave */
+.hero h1 {
+  overflow: hidden;
+}
+.hero h1 .wave-word {
+  display: inline-block;
+  animation: titleWave 5s ease-in-out infinite;
+  animation-delay: var(--word-delay, 0s);
+}
+@keyframes titleWave {
+  0%, 100% { transform: translateY(0); }
+  15% { transform: translateY(-5px); }
+  30% { transform: translateY(0); }
+}
+
+.floating-badge {
+  position: absolute; background: white; border-radius: 60px;
+  padding: 14px 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  display: flex; align-items: center; gap: 12px;
+  animation: float 4s ease-in-out infinite;
+  z-index: 5;
+}
+.floating-badge.top-right { top: -10px; right: -20px; animation-delay: 0s; }
+.floating-badge.bottom-left { bottom: -24px; left: -20px; animation-delay: 2s; }
+.floating-badge .icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.floating-badge .icon.green { background: #E8F8EF; color: var(--success); }
+.floating-badge .icon.blue { background: #E3F2FD; color: var(--lake-accent); }
+.floating-badge .badge-text strong { display: block; font-size: 14px; color: var(--text-dark); }
+.floating-badge .badge-text span { font-size: 12px; color: var(--text-light); }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  25% { transform: translateY(-10px) translateX(6px) rotate(1deg); }
+  50% { transform: translateY(-16px) translateX(0) rotate(0deg); }
+  75% { transform: translateY(-8px) translateX(-6px) rotate(-1deg); }
+  100% { transform: translateY(0) translateX(0) rotate(0deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating shipping boxes in hero background */
+.hero-floating-boxes {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden;
+  pointer-events: none;
+}
+.hero-box {
+  position: absolute;
+  opacity: 0;
+  animation: boxFloat linear infinite;
+}
+.hero-box svg { width: 100%; height: 100%; }
+@keyframes boxFloat {
+  0% { opacity: 0; transform: translateY(20px) translateX(0) rotate(-2deg); }
+  10% { opacity: 0.8; }
+  25% { transform: translateY(2px) translateX(12px) rotate(1deg); }
+  50% { transform: translateY(-18px) translateX(-8px) rotate(4deg); }
+  75% { transform: translateY(-35px) translateX(10px) rotate(-1deg); }
+  88% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-50px) translateX(0) rotate(5deg); }
+}
+
+/* Live stat pulse indicator */
+.live-dot {
+  display: inline-block; width: 8px; height: 8px;
+  background: #2ECC71; border-radius: 50%;
+  margin-right: 8px; vertical-align: middle;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(46,204,113,0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(46,204,113,0); }
+}
+.hero-stat .num {
+  font-size: 28px; font-weight: 700; color: var(--lake-glow);
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.15s ease-out;
+}
+.num-tick { transform: scale(1.04); }
+
+/* ===== BRAND STRIP ===== */
+.brand-strip {
+  padding: 48px;
+  text-align: center;
+  background: var(--warm-white);
+}
+.brand-strip p {
+  font-size: 13px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-light); margin-bottom: 28px;
+}
+.brand-logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: 48px; flex-wrap: wrap; opacity: 0.4;
+}
+.brand-logos span {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 600; color: var(--text-mid);
+}
+
+/* ===== STATS COUNTER ===== */
+.stats-section {
+  background: var(--lake-deep);
+  padding: 80px 48px;
+  position: relative; overflow: hidden;
+}
+.stats-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(59,180,229,0.1), transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(196,122,58,0.08), transparent 60%);
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 40px; max-width: 1200px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 700; color: white;
+  line-height: 1;
+}
+.stat-number .suffix { color: var(--lake-glow); }
+.stat-label {
+  font-size: 15px; color: rgba(255,255,255,0.6);
+  margin-top: 12px; font-weight: 400;
+}
+.stat-divider {
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, var(--lake-accent), var(--copper));
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== HOW IT WORKS ===== */
+.how-section {
+  padding: 120px 48px;
+  background: var(--warm-white);
+}
+.section-header {
+  text-align: center; max-width: 700px; margin: 0 auto 72px;
+}
+.section-tag {
+  font-size: 13px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--lake-accent); margin-bottom: 16px;
+}
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 700; line-height: 1.15;
+  color: var(--lake-deep); letter-spacing: -0.5px;
+}
+.section-header p {
+  font-size: 17px; color: var(--text-mid);
+  line-height: 1.7; margin-top: 16px;
+}
+.process-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 24px; max-width: 1200px; margin: 0 auto;
+  position: relative;
+}
+.process-grid::before {
+  content: '';
+  position: absolute; top: 48px; left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lake-accent), var(--copper), var(--lake-accent), transparent);
+  opacity: 0.3;
+}
+.process-step {
+  text-align: center;
+  position: relative;
+  opacity: 0; transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.process-step.visible { opacity: 1; transform: translateY(0); }
+.process-icon {
+  width: 96px; height: 96px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--sand-light), var(--sand));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 36px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.process-step:hover .process-icon {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.process-number {
+  position: absolute; top: -8px; right: -8px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--lake-accent); color: white;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.process-step h4 {
+  font-size: 17px; font-weight: 600; color: var(--lake-deep);
+  margin-bottom: 8px;
+}
+.process-step p {
+  font-size: 14px; color: var(--text-mid); line-height: 1.6;
+}
+
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  padding: 120px 48px;
+  background: var(--sand-light);
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; max-width: 1200px; margin: 0 auto;
+}
+.service-card {
+  background: white; border-radius: var(--radius-lg);
+  padding: 40px; position: relative; overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0; transform: translateY(30px);
+}
+.service-card.visible { opacity: 1; transform: translateY(0); }
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59,180,229,0.2);
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--lake-accent), var(--copper-light));
+  opacity: 0; transition: opacity 0.4s;
+}
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; margin-bottom: 24px;
+}
+.service-icon.blue { background: rgba(59,180,229,0.1); }
+.service-icon.copper { background: rgba(196,122,58,0.1); }
+.service-icon.green { background: rgba(46,204,113,0.1); }
+.service-card h3 {
+  font-size: 20px; font-weight: 600; color: var(--lake-deep);
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 15px; color: var(--text-mid); line-height: 1.7;
+}
+.service-features {
+  margin-top: 20px; display: flex; flex-direction: column; gap: 10px;
+}
+.service-features li {
+  list-style: none; display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--text-mid);
+}
+.service-features li::before {
+  content: '✓';
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(46,204,113,0.1); color: var(--success);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+
+/* ===== CATEGORIES ===== */
+.categories-section {
+  padding: 120px 48px;
+  background: var(--warm-white);
+}
+.categories-grid {
+  max-width: 1000px; margin: 0 auto;
+}
+.category-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.category-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 8px; cursor: pointer;
+  transition: color 0.3s;
+}
+.category-header:hover { color: var(--lake-accent); }
+.category-header h3 {
+  font-size: 19px; font-weight: 600;
+  display: flex; align-items: center; gap: 14px;
+}
+.category-header h3 span { font-size: 24px; }
+.category-arrow {
+  font-size: 24px; transition: transform 0.4s;
+  color: var(--text-light);
+}
+.category-item.open .category-arrow { transform: rotate(45deg); color: var(--lake-accent); }
+.category-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.category-item.open .category-body { max-height: 300px; }
+.category-content {
+  padding: 0 8px 28px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.category-content p {
+  font-size: 15px; color: var(--text-mid); line-height: 1.7;
+  grid-column: 1 / -1;
+}
+.category-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 50px;
+  background: var(--sand); font-size: 13px; color: var(--text-mid);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section {
+  padding: 120px 48px;
+  background: linear-gradient(165deg, var(--lake-deep), var(--lake-mid));
+  position: relative; overflow: hidden;
+}
+.testimonials-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 80%, rgba(59,180,229,0.12), transparent 50%);
+}
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; max-width: 1200px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.testimonial-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  transition: all 0.4s;
+}
+.testimonial-card:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-4px);
+}
+.testimonial-stars { margin-bottom: 20px; font-size: 16px; letter-spacing: 2px; }
+.testimonial-card blockquote {
+  font-size: 16px; line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  font-style: italic; margin-bottom: 24px;
+}
+.testimonial-author {
+  display: flex; align-items: center; gap: 14px;
+}
+.testimonial-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--lake-accent), var(--copper));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 16px;
+}
+.testimonial-author strong { display: block; color: white; font-size: 15px; }
+.testimonial-author span { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+/* ===== LEAD FORM ===== */
+.form-section {
+  padding: 120px 48px;
+  background: var(--sand-light);
+}
+.form-container {
+  max-width: 800px; margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.form-progress {
+  display: flex; height: 4px; background: #eee;
+}
+.form-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--lake-accent), var(--copper-light));
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-step-indicators {
+  display: flex; justify-content: center; gap: 8px;
+  padding: 28px 40px 0;
+}
+.step-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #ddd;
+  transition: all 0.3s;
+}
+.step-dot.active { background: var(--lake-accent); transform: scale(1.2); }
+.step-dot.completed { background: var(--success); }
+
+.form-body { padding: 36px 48px 48px; }
+.form-step { display: none; }
+.form-step.active { display: block; animation: fadeUp 0.4s ease-out; }
+.form-step-tag {
+  font-size: 12px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--lake-accent); margin-bottom: 8px;
+}
+.form-step h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 600; color: var(--lake-deep);
+  margin-bottom: 28px;
+}
+
+/* Fulfillment type selection */
+.type-options {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-bottom: 28px;
+}
+.type-option {
+  border: 2px solid #eee; border-radius: var(--radius);
+  padding: 28px; text-align: center; cursor: pointer;
+  transition: all 0.3s;
+}
+.type-option:hover { border-color: var(--lake-accent); background: rgba(59,180,229,0.03); }
+.type-option.selected { border-color: var(--lake-accent); background: rgba(59,180,229,0.06); }
+.type-option .type-icon {
+  font-size: 36px; margin-bottom: 12px;
+}
+.type-option h4 { font-size: 16px; font-weight: 600; color: var(--lake-deep); }
+.type-option p { font-size: 13px; color: var(--text-light); margin-top: 6px; }
+
+/* Ecommerce platform grid */
+.platform-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  margin-bottom: 28px;
+}
+.platform-option {
+  border: 2px solid #eee; border-radius: var(--radius);
+  padding: 20px 12px; text-align: center; cursor: pointer;
+  transition: all 0.3s;
+}
+.platform-option:hover { border-color: var(--lake-accent); }
+.platform-option.selected { border-color: var(--lake-accent); background: rgba(59,180,229,0.06); }
+.platform-option .plat-icon {
+  width: 44px; height: 44px; margin: 0 auto 10px;
+  background: #f5f5f5; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.platform-option span { font-size: 13px; font-weight: 500; color: var(--text-mid); }
+
+/* Order volume */
+.volume-options {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  margin-bottom: 28px;
+}
+.volume-option {
+  border: 2px solid #eee; border-radius: var(--radius);
+  padding: 20px 24px; cursor: pointer;
+  transition: all 0.3s;
+  display: flex; align-items: center; gap: 14px;
+}
+.volume-option:hover { border-color: var(--lake-accent); }
+.volume-option.selected { border-color: var(--lake-accent); background: rgba(59,180,229,0.06); }
+.volume-dot {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 2px solid #ccc; flex-shrink: 0;
+  transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center;
+}
+.volume-option.selected .volume-dot {
+  border-color: var(--lake-accent);
+  background: var(--lake-accent);
+}
+.volume-option.selected .volume-dot::after {
+  content: ''; width: 8px; height: 8px;
+  border-radius: 50%; background: white;
+}
+.volume-option strong { font-size: 15px; color: var(--lake-deep); }
+.volume-option span { font-size: 13px; color: var(--text-light); display: block; }
+
+/* Contact fields */
+.form-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-bottom: 16px;
+}
+.form-field { margin-bottom: 16px; }
+.form-field label {
+  display: block; font-size: 14px; font-weight: 500;
+  color: var(--text-mid); margin-bottom: 6px;
+}
+.form-field input, .form-field select {
+  width: 100%; padding: 14px 16px;
+  border: 1.5px solid #e0e0e0; border-radius: var(--radius);
+  font-size: 15px; font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: white;
+  color: var(--text-dark);
+}
+.form-field input:focus, .form-field select:focus {
+  outline: none; border-color: var(--lake-accent);
+  box-shadow: 0 0 0 4px rgba(59,180,229,0.1);
+}
+.form-field input::placeholder { color: #bbb; }
+
+.form-nav {
+  display: flex; justify-content: space-between; gap: 16px;
+  margin-top: 32px;
+}
+.btn-back {
+  padding: 14px 28px; border-radius: 50px;
+  background: transparent; color: var(--text-mid);
+  font-size: 15px; font-weight: 500;
+  border: 1.5px solid #ddd; cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-back:hover { border-color: var(--text-mid); }
+.btn-next {
+  padding: 14px 36px; border-radius: 50px;
+  background: var(--lake-accent); color: white;
+  font-size: 15px; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s; margin-left: auto;
+}
+.btn-next:hover { background: var(--lake-light); transform: translateY(-1px); }
+.btn-submit {
+  padding: 16px 48px; border-radius: 50px;
+  background: linear-gradient(135deg, var(--lake-accent), var(--lake-light));
+  color: white; font-size: 16px; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s; width: 100%;
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,180,229,0.35); }
+
+/* Success state */
+.form-success {
+  text-align: center; padding: 40px 0;
+  display: none;
+}
+.form-success.show { display: block; animation: fadeUp 0.5s ease-out; }
+.success-check {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: rgba(46,204,113,0.1);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px; font-size: 32px;
+}
+.form-success h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; color: var(--lake-deep); margin-bottom: 12px;
+}
+.form-success p { font-size: 16px; color: var(--text-mid); }
+
+/* ===== CERTIFICATIONS ===== */
+.certs-section {
+  padding: 60px 48px;
+  background: var(--warm-white);
+  text-align: center;
+}
+.certs-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 48px; flex-wrap: wrap;
+}
+.cert-badge {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  opacity: 0.5; transition: opacity 0.3s;
+}
+.cert-badge:hover { opacity: 1; }
+.cert-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--sand); display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+.cert-badge span { font-size: 12px; font-weight: 600; color: var(--text-light); letter-spacing: 0.5px; }
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  padding: 120px 48px;
+  background: linear-gradient(135deg, var(--lake-deep) 0%, var(--lake-mid) 50%, var(--lake-light) 100%);
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 120%, rgba(59,180,229,0.2), transparent 60%);
+}
+.cta-content {
+  position: relative; z-index: 1; max-width: 700px; margin: 0 auto;
+}
+.cta-section .section-tag { color: var(--lake-glow); }
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700; color: white;
+  line-height: 1.15; margin-bottom: 20px;
+}
+.cta-section p {
+  font-size: 18px; color: rgba(255,255,255,0.7);
+  margin-bottom: 36px; line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #060E1A;
+  padding: 72px 48px 36px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px; max-width: 1200px; margin: 0 auto;
+}
+.footer-brand .nav-logo { margin-bottom: 16px; }
+.footer-brand .nav-logo span { color: white; }
+.footer-brand p { font-size: 14px; line-height: 1.7; max-width: 320px; }
+.footer-col h4 {
+  font-size: 14px; font-weight: 600; color: white;
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: rgba(255,255,255,0.5);
+  text-decoration: none; margin-bottom: 12px; transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--lake-glow); }
+.footer-bottom {
+  max-width: 1200px; margin: 48px auto 0;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; justify-content: space-between;
+  font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { order: -1; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(3, 1fr); }
+  .process-grid::before { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .platform-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  nav.scrolled { padding: 12px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 20px 60px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .how-section, .services-section, .categories-section, .testimonials-section,
+  .form-section, .cta-section { padding: 80px 20px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .type-options { grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: repeat(3, 1fr); }
+  .volume-options { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-body { padding: 28px 24px 36px; }
+  .category-content { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#0B1D3A;">
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="data:image/png;base64,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" alt="Lakeside Fulfillment" style="width:42px;height:auto;filter:drop-shadow(0 0 6px rgba(59,180,229,0.3));">
+    <span>Lakeside</span>
+  </a>
+  <div class="nav-links">
+    <a href="#how">How It Works</a>
+    <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <!-- Floating shipping boxes background -->
+  <div class="hero-floating-boxes" id="floatingBoxes"></div>
+
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">Austin, TX Fulfillment</div>
+      <h1>Your Brand Ships.<br><em>We Handle the Rest.</em></h1>
+      <p class="hero-desc">Lakeside Fulfillment receives, stores, picks, packs, and ships your entire inventory at scale. Thousands of orders daily, fulfilled with precision from the heart of Texas.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">Get Free Quote</a>
+        <a href="#how" class="btn-secondary">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="floating-badge top-right">
+          <div class="icon green">✓</div>
+          <div class="badge-text">
+            <strong>99.97% Accuracy</strong>
+            <span>Order fulfillment rate</span>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <h3><span class="live-dot"></span>Today's Fulfillment</h3>
+          <div class="hero-stat-row">
+            <div class="hero-stat"><div class="num" id="liveOrders">0</div><div class="label">Orders Shipped</div></div>
+            <div class="hero-stat"><div class="num" id="liveItems">0</div><div class="label">Items Picked</div></div>
+            <div class="hero-stat"><div class="num" id="liveShipTime">1.8d</div><div class="label">Avg Ship Time</div></div>
+            <div class="hero-stat"><div class="num" id="liveOnTime">98.2%</div><div class="label">On Time Rate</div></div>
+          </div>
+        </div>
+        <div class="floating-badge bottom-left">
+          <div class="icon blue">📦</div>
+          <div class="badge-text">
+            <strong>2-Day Delivery</strong>
+            <span>Nationwide coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Strip -->
+<div class="brand-strip">
+  <p>Trusted by growing brands nationwide</p>
+  <div class="brand-logos">
+    <span>PawBox</span>
+    <span>Vitality+</span>
+    <span>Glow Co.</span>
+    <span>FreshFit</span>
+    <span>LuxePet</span>
+    <span>NovaSport</span>
+  </div>
+</div>
+
+<!-- Stats Counter -->
+<section class="stats-section" id="stats">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number"><span class="counter" data-target="5" data-suffix="M+">0</span><span class="suffix">M+</span></div>
+      <div class="stat-label">Orders Fulfilled Annually</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="counter" data-target="99.97" data-suffix="%" data-decimals="2">0</span><span class="suffix">%</span></div>
+      <div class="stat-label">Order Accuracy Rate</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="counter" data-target="150" data-suffix="K+">0</span><span class="suffix">K+</span></div>
+      <div class="stat-label">Sq. Ft. Warehouse Space</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="counter" data-target="99.6" data-suffix="%" data-decimals="1">0</span><span class="suffix">%</span></div>
+      <div class="stat-label">On-Time Shipment Rate</div>
+      <div class="stat-divider"></div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-section" id="how">
+  <div class="section-header">
+    <div class="section-tag">How It Works</div>
+    <h2>From Your Warehouse to Their Doorstep</h2>
+    <p>We handle every step of fulfillment so you can focus on growing your brand. Simple onboarding, seamless execution.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step" data-delay="0">
+      <div class="process-icon">📥<span class="process-number">1</span></div>
+      <h4>Receive</h4>
+      <p>Ship your inventory to our Austin facility. We receive, inspect, and log every item.</p>
+    </div>
+    <div class="process-step" data-delay="100">
+      <div class="process-icon">🏗️<span class="process-number">2</span></div>
+      <h4>Store</h4>
+      <p>Products are organized in our climate-controlled warehouse for quick retrieval.</p>
+    </div>
+    <div class="process-step" data-delay="200">
+      <div class="process-icon">🎯<span class="process-number">3</span></div>
+      <h4>Pick & Pack</h4>
+      <p>Orders are picked with precision and packed with care, including custom inserts.</p>
+    </div>
+    <div class="process-step" data-delay="300">
+      <div class="process-icon">🚚<span class="process-number">4</span></div>
+      <h4>Ship</h4>
+      <p>We negotiate the best carrier rates and ship fast, reaching most of the U.S. in 2 days.</p>
+    </div>
+    <div class="process-step" data-delay="400">
+      <div class="process-icon">📊<span class="process-number">5</span></div>
+      <h4>Track</h4>
+      <p>Real-time visibility into inventory, orders, and shipments through your dashboard.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-section" id="services">
+  <div class="section-header">
+    <div class="section-tag">Our Services</div>
+    <h2>End-to-End Fulfillment Solutions</h2>
+    <p>Everything you need to scale your ecommerce business without building your own warehouse operation.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon blue">📦</div>
+      <h3>DTC Fulfillment</h3>
+      <p>Direct-to-consumer order fulfillment with fast shipping, custom packaging, and real-time tracking.</p>
+      <ul class="service-features">
+        <li>Same-day processing for orders before 2 PM</li>
+        <li>Custom branded packaging &amp; inserts</li>
+        <li>Automated order syncing</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon copper">🏬</div>
+      <h3>B2B &amp; Wholesale</h3>
+      <p>Bulk order fulfillment with retail-compliant packaging, EDI integration, and routing guide adherence.</p>
+      <ul class="service-features">
+        <li>Retail-ready palletization</li>
+        <li>Compliance labeling &amp; routing</li>
+        <li>EDI &amp; purchase order management</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon green">📋</div>
+      <h3>Inventory Management</h3>
+      <p>24/7 cloud-based inventory platform with real-time tracking, reorder alerts, and demand forecasting.</p>
+      <ul class="service-features">
+        <li>Real-time stock levels &amp; alerts</li>
+        <li>Lot tracking &amp; FEFO rotation</li>
+        <li>Demand forecasting tools</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon blue">🔄</div>
+      <h3>Returns Processing</h3>
+      <p>Hassle-free returns management with inspection, restocking, and customer communication.</p>
+      <ul class="service-features">
+        <li>Quality inspection &amp; grading</li>
+        <li>Restock or dispose workflows</li>
+        <li>Return analytics &amp; reporting</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon copper">🎁</div>
+      <h3>Subscription Boxes</h3>
+      <p>Kitting, assembly, and subscription fulfillment with flexible configurations and recurring scheduling.</p>
+      <ul class="service-features">
+        <li>Custom kitting &amp; assembly</li>
+        <li>Flexible subscription cadences</li>
+        <li>Gift messaging &amp; personalization</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon green">🌎</div>
+      <h3>Freight &amp; Drayage</h3>
+      <p>Inbound container receiving, drayage coordination, and freight management from port to shelf.</p>
+      <ul class="service-features">
+        <li>Container unloading &amp; devanning</li>
+        <li>Cross-dock capabilities</li>
+        <li>Freight brokerage partnerships</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Industry Categories -->
+<section class="categories-section" id="industries">
+  <div class="section-header">
+    <div class="section-tag">Industries We Serve</div>
+    <h2>Specialized Fulfillment for Every Category</h2>
+    <p>From supplements to sneakers, we have the expertise and certifications to handle your products right.</p>
+  </div>
+  <div class="categories-grid">
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>💊</span> Health &amp; Wellness</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>Temperature-sensitive storage, lot tracking, and GMP-compliant handling for supplements, vitamins, and wellness products. Full FEFO inventory rotation and recall readiness.</p>
+          <div class="category-tag">✓ GMP Certified</div>
+          <div class="category-tag">✓ Lot Tracking</div>
+          <div class="category-tag">✓ Temp Controlled</div>
+          <div class="category-tag">✓ FEFO Rotation</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>💄</span> Beauty &amp; Personal Care</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>Premium unboxing experiences with custom packaging, fragile item handling, and climate-controlled storage for cosmetics, skincare, and fragrance products.</p>
+          <div class="category-tag">✓ Custom Packaging</div>
+          <div class="category-tag">✓ Fragile Handling</div>
+          <div class="category-tag">✓ Climate Controlled</div>
+          <div class="category-tag">✓ Gift-Ready Options</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>🍽️</span> Food &amp; Beverage</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>GFSI-certified facilities with strict temperature monitoring, expiration date management, and FDA-compliant processes for shelf-stable food and beverages.</p>
+          <div class="category-tag">✓ GFSI Certified</div>
+          <div class="category-tag">✓ SQF Compliant</div>
+          <div class="category-tag">✓ Expiration Tracking</div>
+          <div class="category-tag">✓ FDA Ready</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>👕</span> Apparel &amp; Accessories</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>Garment storage on hangers or folded, SKU-intensive fulfillment for sizing variants, and poly bagging with branded tissue and inserts.</p>
+          <div class="category-tag">✓ Hanging Storage</div>
+          <div class="category-tag">✓ SKU Management</div>
+          <div class="category-tag">✓ Poly Bagging</div>
+          <div class="category-tag">✓ Branded Inserts</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>🐾</span> Pets</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>Fast, reliable fulfillment for pet food, supplements, toys, and accessories. Subscription box expertise with GMP-certified handling for consumables.</p>
+          <div class="category-tag">✓ Subscription Ready</div>
+          <div class="category-tag">✓ Heavy Item Handling</div>
+          <div class="category-tag">✓ GMP for Consumables</div>
+          <div class="category-tag">✓ Custom Packaging</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>🏠</span> Home Goods</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>Oversized and fragile item fulfillment with protective packaging, assembly kitting, and freight shipping options for furniture and home decor.</p>
+          <div class="category-tag">✓ Fragile Packaging</div>
+          <div class="category-tag">✓ Oversize Handling</div>
+          <div class="category-tag">✓ Assembly Kitting</div>
+          <div class="category-tag">✓ Freight Options</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-item">
+      <div class="category-header" data-action="toggle-category">
+        <h3><span>⚽</span> Sports, Toys &amp; Games</h3>
+        <span class="category-arrow">+</span>
+      </div>
+      <div class="category-body">
+        <div class="category-content">
+          <p>High-volume seasonal fulfillment with surge capacity for peak periods, bundling capabilities, and retail-ready packaging for major retailers.</p>
+          <div class="category-tag">✓ Peak Season Surge</div>
+          <div class="category-tag">✓ Bundling &amp; Kitting</div>
+          <div class="category-tag">✓ Retail Compliant</div>
+          <div class="category-tag">✓ Gift Wrapping</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section" id="testimonials">
+  <div class="section-header">
+    <div class="section-tag" style="color: var(--lake-glow)">What Our Partners Say</div>
+    <h2 style="color: white">Trusted by Brands That Refuse to Settle</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <blockquote>"We were shipping 200 orders a day from our garage. Lakeside took over and within a month we scaled to 2,000 per day without a single hiccup."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JR</div>
+        <div><strong>Jake Reeves</strong><span>Founder, PawBox</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <blockquote>"Our Target launch was massive, and Lakeside didn't flinch. They handled the retail compliance, palletization, and routing flawlessly."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SM</div>
+        <div><strong>Sarah Mitchell</strong><span>VP Operations, Glow Co.</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <blockquote>"Switching to Lakeside cut our shipping costs by 35% and our average delivery time dropped to 1.8 days. The ROI was immediate."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">DL</div>
+        <div><strong>David Liu</strong><span>CEO, FreshFit Supplements</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="certs-section">
+  <div class="certs-row">
+    <div class="cert-badge"><div class="cert-icon">🏭</div><span>GMP Certified</span></div>
+    <div class="cert-badge"><div class="cert-icon">🔒</div><span>SOC 2</span></div>
+    <div class="cert-badge"><div class="cert-icon">✅</div><span>SQF</span></div>
+    <div class="cert-badge"><div class="cert-icon">🌍</div><span>GFSI</span></div>
+    <div class="cert-badge"><div class="cert-icon">📋</div><span>ISO 27001</span></div>
+  </div>
+</section>
+
+<!-- Lead Form -->
+<section class="form-section" id="quote">
+  <div class="section-header">
+    <div class="section-tag">Get Started</div>
+    <h2>Get Your Free Fulfillment Quote</h2>
+    <p>Tell us about your business and we'll put together a custom pricing plan within 24 hours.</p>
+  </div>
+  <div class="form-container">
+    <div class="form-progress">
+      <div class="form-progress-fill" id="progressFill" style="width: 25%"></div>
+    </div>
+    <div class="form-step-indicators" id="stepDots"></div>
+    <div class="form-body" id="formBody">
+
+      <!-- Step 1: Fulfillment Type -->
+      <div class="form-step active" data-step="1">
+        <div class="form-step-tag">Step 1 of 4</div>
+        <h3>What type of fulfillment are you looking for?</h3>
+        <div class="type-options">
+          <div class="type-option" data-type="dtc">
+            <div class="type-icon">📦</div>
+            <h4>DTC Fulfillment</h4>
+            <p>Direct-to-consumer order shipping</p>
+          </div>
+          <div class="type-option" data-type="b2b">
+            <div class="type-icon">🏬</div>
+            <h4>B2B / Wholesale</h4>
+            <p>Bulk &amp; retail distribution</p>
+          </div>
+          <div class="type-option" data-type="subscription">
+            <div class="type-icon">🔄</div>
+            <h4>Subscription Boxes</h4>
+            <p>Recurring kitting &amp; assembly</p>
+          </div>
+          <div class="type-option" data-type="all">
+            <div class="type-icon">🌐</div>
+            <h4>All of the Above</h4>
+            <p>Full omnichannel fulfillment</p>
+          </div>
+        </div>
+        <div class="form-nav">
+          <button class="btn-next" data-action="next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Ecommerce Platform -->
+      <div class="form-step" data-step="2">
+        <div class="form-step-tag">Step 2 of 4</div>
+        <h3>Which ecommerce platform do you use?</h3>
+        <div class="platform-grid">
+          <div class="platform-option" data-platform="shopify">
+            <div class="plat-icon">🟢</div><span>Shopify</span>
+          </div>
+          <div class="platform-option" data-platform="amazon">
+            <div class="plat-icon">📦</div><span>Amazon</span>
+          </div>
+          <div class="platform-option" data-platform="woocommerce">
+            <div class="plat-icon">🟣</div><span>WooCommerce</span>
+          </div>
+          <div class="platform-option" data-platform="magento">
+            <div class="plat-icon">🔶</div><span>Magento</span>
+          </div>
+          <div class="platform-option" data-platform="bigcommerce">
+            <div class="plat-icon">🅱️</div><span>BigCommerce</span>
+          </div>
+          <div class="platform-option" data-platform="salesforce">
+            <div class="plat-icon">☁️</div><span>Salesforce</span>
+          </div>
+          <div class="platform-option" data-platform="tiktok">
+            <div class="plat-icon">🎵</div><span>TikTok Shop</span>
+          </div>
+          <div class="platform-option" data-platform="walmart">
+            <div class="plat-icon">⭐</div><span>Walmart</span>
+          </div>
+          <div class="platform-option" data-platform="squarespace">
+            <div class="plat-icon">◼️</div><span>Squarespace</span>
+          </div>
+          <div class="platform-option" data-platform="wix">
+            <div class="plat-icon">🌐</div><span>Wix</span>
+          </div>
+          <div class="platform-option" data-platform="netsuite">
+            <div class="plat-icon">📊</div><span>NetSuite</span>
+          </div>
+          <div class="platform-option" data-platform="other">
+            <div class="plat-icon">•••</div><span>Other</span>
+          </div>
+        </div>
+        <div class="form-nav">
+          <button class="btn-back" data-action="prev">Back</button>
+          <button class="btn-next" data-action="next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Volume -->
+      <div class="form-step" data-step="3">
+        <div class="form-step-tag">Step 3 of 4</div>
+        <h3>How many orders do you ship per month?</h3>
+        <div class="volume-options">
+          <div class="volume-option" data-volume="0-500">
+            <div class="volume-dot"></div>
+            <div><strong>0 &ndash; 500</strong><span>Just getting started</span></div>
+          </div>
+          <div class="volume-option" data-volume="500-2000">
+            <div class="volume-dot"></div>
+            <div><strong>500 &ndash; 2,000</strong><span>Growing steadily</span></div>
+          </div>
+          <div class="volume-option" data-volume="2000-10000">
+            <div class="volume-dot"></div>
+            <div><strong>2,000 &ndash; 10,000</strong><span>Scaling fast</span></div>
+          </div>
+          <div class="volume-option" data-volume="10000+">
+            <div class="volume-dot"></div>
+            <div><strong>10,000+</strong><span>High volume enterprise</span></div>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>How many SKUs do you carry?</label>
+          <select id="skuCount">
+            <option value="">Select SKU count</option>
+            <option>1 &ndash; 50</option>
+            <option>51 &ndash; 200</option>
+            <option>201 &ndash; 1,000</option>
+            <option>1,000+</option>
+          </select>
+        </div>
+
+        <div class="form-nav">
+          <button class="btn-back" data-action="prev">Back</button>
+          <button class="btn-next" data-action="next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Contact Info -->
+      <div class="form-step" data-step="4">
+        <div class="form-step-tag">Step 4 of 4</div>
+        <h3>Where should we send your custom quote?</h3>
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" id="formFirstName" placeholder="John">
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" id="formLastName" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Business Email</label>
+          <input type="email" id="formEmail" placeholder="john@yourbrand.com">
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Company Name</label>
+            <input type="text" id="formCompany" placeholder="Your Brand Inc.">
+          </div>
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" id="formPhone" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Website URL</label>
+          <input type="url" id="formWebsite" placeholder="https://yourbrand.com">
+        </div>
+        <div class="form-nav">
+          <button class="btn-back" data-action="prev">Back</button>
+          <button class="btn-submit" id="submitBtn" data-action="submit">Get My Free Quote</button>
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-check">✓</div>
+        <h3>We're On It!</h3>
+        <p>Our team will review your details and send a custom fulfillment quote within 24 hours. Check your email soon!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-content">
+    <div class="section-tag">Ready to Scale?</div>
+    <h2>Stop Packing Boxes.<br>Start Growing Your Brand.</h2>
+    <p>Let Lakeside handle the fulfillment while you focus on what you do best. Get started in as little as two weeks.</p>
+    <a href="#quote" class="btn-primary">Request Your Free Quote</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">
+        <img src="data:image/png;base64,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" alt="Lakeside Fulfillment" style="width:36px;height:auto;filter:drop-shadow(0 0 6px rgba(59,180,229,0.3));">
+        <span>Lakeside Fulfillment</span>
+      </a>
+      <p>Austin, Texas based 3PL fulfillment center helping ecommerce brands receive, store, pick, pack, and ship thousands of orders daily.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#">DTC Fulfillment</a>
+      <a href="#">B2B &amp; Wholesale</a>
+      <a href="#">Subscription Boxes</a>
+      <a href="#">Returns Processing</a>
+      <a href="#">Inventory Management</a>
+    </div>
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <a href="#">Health &amp; Wellness</a>
+      <a href="#">Beauty &amp; Personal Care</a>
+      <a href="#">Food &amp; Beverage</a>
+      <a href="#">Apparel</a>
+      <a href="#">Pets</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Lakeside Fulfillment. All rights reserved.</span>
+    <span>Austin, TX | (512) 555-0200</span>
+    <span style="color: rgba(255,255,255,0.35); font-size: 12px;">Powered by <a href="https://agentcoreai.com" target="_blank" style="color: var(--lake-accent); text-decoration: none; font-weight: 500;">Agent Core AI</a></span>
+  </div>
+</footer>
+
+<script>
+// ===== WAVE TEXT ON HERO TITLE (word-based) =====
+const heroH1 = document.querySelector('.hero h1');
+if (heroH1) {
+  const html = heroH1.innerHTML;
+  // Split into lines by <br>
+  const lines = html.split('<br>');
+  const newHTML = lines.map(line => {
+    // Check if line is wrapped in <em>
+    const emMatch = line.match(/^<em[^>]*>(.*)<\/em>$/i);
+    const text = emMatch ? emMatch[1] : line;
+    const words = text.split(' ').filter(w => w.length > 0);
+    let wordIndex = 0;
+    const wrapped = words.map(word => {
+      const span = `<span class="wave-word" style="--word-delay:${wordIndex * 0.2}s">${word}</span>`;
+      wordIndex++;
+      return span;
+    }).join(' ');
+    return emMatch ? `<em>${wrapped}</em>` : wrapped;
+  }).join('<br>');
+  heroH1.innerHTML = newHTML;
+}
+
+// ===== WAVE TEXT ON STAT LABELS =====
+document.querySelectorAll('.hero-stat .label').forEach(label => {
+  const text = label.textContent;
+  label.textContent = '';
+  [...text].forEach((char, i) => {
+    if (char === ' ') {
+      const space = document.createElement('span');
+      space.className = 'wave-space';
+      label.appendChild(space);
+    } else {
+      const span = document.createElement('span');
+      span.className = 'wave-char';
+      span.textContent = char;
+      span.style.setProperty('--wave-delay', (i * 0.08) + 's');
+      label.appendChild(span);
+    }
+  });
+});
+
+// ===== NAVBAR SCROLL + SECTION COLOR BLENDING =====
+const navbar = document.getElementById('navbar');
+
+// Map sections to their background colors
+const sectionColors = [
+  { selector: '.hero', bg: '#0B1D3A', text: 'rgba(255,255,255,0.9)' },
+  { selector: '.brand-strip', bg: '#FEFCFA', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.stats-section', bg: '#0B1D3A', text: 'rgba(255,255,255,0.9)' },
+  { selector: '.how-section', bg: '#FEFCFA', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.services-section', bg: '#FBF7F2', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.categories-section', bg: '#FEFCFA', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.testimonials-section', bg: '#0B1D3A', text: 'rgba(255,255,255,0.9)' },
+  { selector: '.certs-section', bg: '#FEFCFA', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.form-section', bg: '#FBF7F2', text: 'rgba(26,26,46,0.85)' },
+  { selector: '.cta-section', bg: '#0B1D3A', text: 'rgba(255,255,255,0.9)' },
+  { selector: 'footer', bg: '#060E1A', text: 'rgba(255,255,255,0.9)' },
+];
+
+function updateNavColors() {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  
+  const navBottom = navbar.getBoundingClientRect().bottom;
+  
+  // Find which section the nav bottom overlaps
+  for (let i = sectionColors.length - 1; i >= 0; i--) {
+    const el = document.querySelector(sectionColors[i].selector);
+    if (!el) continue;
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= navBottom && rect.bottom > navBottom) {
+      navbar.style.setProperty('--nav-blend-color', sectionColors[i].bg);
+      navbar.style.setProperty('--nav-text-color', sectionColors[i].text);
+      
+      // Update logo text color
+      const logoSpan = navbar.querySelector('.nav-logo span');
+      const links = navbar.querySelectorAll('.nav-links a:not(.nav-cta)');
+      const isLight = sectionColors[i].bg.startsWith('#F') || sectionColors[i].bg.startsWith('#f');
+      
+      // Logo always stays white (dark cloud behind it)
+      if (isLight) {
+        links.forEach(a => { a.style.color = 'rgba(26,26,46,0.8)'; a.style.textShadow = 'none'; });
+      } else {
+        links.forEach(a => { a.style.color = 'rgba(255,255,255,0.9)'; a.style.textShadow = '0 1px 6px rgba(0,0,0,0.4)'; });
+      }
+      break;
+    }
+  }
+}
+window.addEventListener('scroll', updateNavColors);
+updateNavColors();
+
+// ===== ANIMATED COUNTERS =====
+const counters = document.querySelectorAll('.counter');
+let statsAnimated = false;
+
+function animateCounters() {
+  if (statsAnimated) return;
+  const section = document.getElementById('stats');
+  const rect = section.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.8) {
+    statsAnimated = true;
+    counters.forEach(counter => {
+      const target = parseFloat(counter.dataset.target);
+      const decimals = parseInt(counter.dataset.decimals || 0);
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutExpo
+        const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = eased * target;
+        counter.textContent = decimals > 0 ? current.toFixed(decimals) : Math.floor(current);
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    });
+  }
+}
+window.addEventListener('scroll', animateCounters);
+animateCounters();
+
+// ===== SCROLL REVEAL =====
+const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.dataset.delay || 0;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.process-step, .service-card').forEach(el => observer.observe(el));
+
+// ===== CATEGORY ACCORDION =====
+function toggleCategory(header) {
+  const item = header.closest('.category-item');
+  if (!item) return;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.category-item.open').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ===== MULTI-STEP FORM =====
+let currentStep = 1;
+const totalSteps = 4;
+let formData = { type: '', platform: '', volume: '' };
+
+// Build step dots
+const dotsContainer = document.getElementById('stepDots');
+for (let i = 1; i <= totalSteps; i++) {
+  const dot = document.createElement('div');
+  dot.className = 'step-dot' + (i === 1 ? ' active' : '');
+  dot.dataset.step = i;
+  dotsContainer.appendChild(dot);
+}
+
+function updateFormUI() {
+  document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+  const activeStep = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+  if (activeStep) activeStep.classList.add('active');
+
+  document.getElementById('progressFill').style.width = ((currentStep / totalSteps) * 100) + '%';
+
+  document.querySelectorAll('.step-dot').forEach(dot => {
+    const step = parseInt(dot.dataset.step);
+    dot.classList.remove('active', 'completed');
+    if (step === currentStep) dot.classList.add('active');
+    else if (step < currentStep) dot.classList.add('completed');
+  });
+}
+
+function nextStep() {
+  if (currentStep < totalSteps) { currentStep++; updateFormUI(); }
+}
+function prevStep() {
+  if (currentStep > 1) { currentStep--; updateFormUI(); }
+}
+
+function selectType(el, type) {
+  document.querySelectorAll('.type-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  formData.type = type;
+}
+function selectPlatform(el, platform) {
+  document.querySelectorAll('.platform-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  formData.platform = platform;
+}
+function selectVolume(el, volume) {
+  document.querySelectorAll('.volume-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  formData.volume = volume;
+}
+
+// ===== EVENT DELEGATION (bulletproof click handling) =====
+document.addEventListener('click', function(e) {
+  // Type options
+  const typeOpt = e.target.closest('.type-option');
+  if (typeOpt && typeOpt.dataset.type) {
+    selectType(typeOpt, typeOpt.dataset.type);
+    return;
+  }
+  // Platform options
+  const platOpt = e.target.closest('.platform-option');
+  if (platOpt && platOpt.dataset.platform) {
+    selectPlatform(platOpt, platOpt.dataset.platform);
+    return;
+  }
+  // Volume options
+  const volOpt = e.target.closest('.volume-option');
+  if (volOpt && volOpt.dataset.volume) {
+    selectVolume(volOpt, volOpt.dataset.volume);
+    return;
+  }
+  // Next/Prev/Submit buttons
+  const actionEl = e.target.closest('[data-action]');
+  if (actionEl) {
+    const action = actionEl.dataset.action;
+    if (action === 'next') nextStep();
+    else if (action === 'prev') prevStep();
+    else if (action === 'submit') submitForm();
+    else if (action === 'toggle-category') toggleCategory(actionEl);
+    return;
+  }
+});
+
+function submitForm() {
+  const btn = document.getElementById('submitBtn');
+  const firstName = document.getElementById('formFirstName').value.trim();
+  const lastName = document.getElementById('formLastName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const phone = document.getElementById('formPhone').value.trim();
+  const company = document.getElementById('formCompany').value.trim();
+  const website = document.getElementById('formWebsite').value.trim();
+  const skuCount = document.getElementById('skuCount').value;
+
+  // Basic validation
+  if (!firstName || !email) {
+    alert('Please enter at least your first name and email.');
+    return;
+  }
+
+  // Disable button while sending
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  // =====================================================
+  // GHL WEBHOOK URL - Replace with your actual webhook URL
+  // Go to GHL > Automation > Workflows > Create Workflow
+  // Add trigger: "Inbound Webhook" > Copy the URL here
+  // =====================================================
+  const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/IUVOXQrhivitjvHqGOoJ/webhook-trigger/6360f07e-eacd-4f18-a952-e6a578261847';
+
+  // Build the payload
+  // GHL will auto-map these standard field names
+  const payload = {
+    // Standard GHL contact fields
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    phone: phone,
+    company_name: company,
+    website: website,
+    // Custom fields from multi-step form (map these in GHL workflow)
+    fulfillment_type: formData.type,
+    ecommerce_platform: formData.platform,
+    monthly_order_volume: formData.volume,
+    sku_count: skuCount,
+    // Lead source tracking
+    source: 'Lakeside Fulfillment Website',
+    form_name: 'Get a Quote'
+  };
+
+  // Send to GHL webhook
+  fetch(GHL_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+    mode: 'no-cors'
+  })
+  .then(() => {
+    // Show success (no-cors won't return readable response, so we assume success)
+    document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('formSuccess').classList.add('show');
+    document.getElementById('progressFill').style.width = '100%';
+    document.querySelectorAll('.step-dot').forEach(d => d.classList.add('completed'));
+  })
+  .catch(err => {
+    console.error('Webhook error:', err);
+    // Still show success to user, log error for debugging
+    document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('formSuccess').classList.add('show');
+    document.getElementById('progressFill').style.width = '100%';
+    document.querySelectorAll('.step-dot').forEach(d => d.classList.add('completed'));
+  })
+  .finally(() => {
+    btn.disabled = false;
+    btn.textContent = 'Get My Free Quote';
+  });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ===== FLOATING SHIPPING BOXES =====
+(function() {
+  const container = document.getElementById('floatingBoxes');
+  // SVG templates: shipping box, package, mail box
+  const boxSVGs = [
+    // Closed shipping box - front view rectangle
+    `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="18" width="44" height="34" rx="3" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
+      <rect x="10" y="18" width="44" height="10" rx="2" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="rgba(255,255,255,0.04)"/>
+      <line x1="32" y1="18" x2="32" y2="28" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="26" y="34" width="12" height="8" rx="1" stroke="rgba(109,213,245,0.2)" stroke-width="1" fill="none"/>
+    </svg>`,
+    // Tall rectangle package
+    `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="16" y="10" width="32" height="44" rx="3" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
+      <line x1="16" y1="20" x2="48" y2="20" stroke="rgba(196,122,58,0.18)" stroke-width="1.5"/>
+      <line x1="16" y1="44" x2="48" y2="44" stroke="rgba(196,122,58,0.18)" stroke-width="1.5"/>
+      <rect x="27" y="26" width="10" height="12" rx="1" stroke="rgba(109,213,245,0.15)" stroke-width="1" fill="none"/>
+    </svg>`,
+    // Flat mail package - wide rectangle
+    `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="20" width="52" height="28" rx="3" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
+      <line x1="16" y1="30" x2="34" y2="30" stroke="rgba(109,213,245,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="16" y1="36" x2="28" y2="36" stroke="rgba(109,213,245,0.1)" stroke-width="1" stroke-linecap="round"/>
+      <rect x="42" y="26" width="10" height="10" rx="1" stroke="rgba(196,122,58,0.2)" stroke-width="1" fill="rgba(196,122,58,0.05)"/>
+    </svg>`,
+    // Square box with tape cross
+    `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="12" y="12" width="40" height="40" rx="3" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
+      <line x1="12" y1="32" x2="52" y2="32" stroke="rgba(196,122,58,0.15)" stroke-width="2"/>
+      <line x1="32" y1="12" x2="32" y2="52" stroke="rgba(196,122,58,0.15)" stroke-width="2"/>
+      <circle cx="32" cy="32" r="4" stroke="rgba(109,213,245,0.15)" stroke-width="1" fill="none"/>
+    </svg>`
+  ];
+
+  // Place 6 boxes scattered in the hero, with staggered timing
+  const placements = [
+    { left: '5%',  top: '15%', size: 52, duration: 18, delay: 0 },
+    { left: '82%', top: '25%', size: 44, duration: 22, delay: 4 },
+    { left: '15%', top: '65%', size: 38, duration: 20, delay: 8 },
+    { left: '72%', top: '70%', size: 48, duration: 24, delay: 2 },
+    { left: '45%', top: '10%', size: 36, duration: 19, delay: 10 },
+    { left: '90%', top: '55%', size: 40, duration: 21, delay: 6 },
+  ];
+
+  placements.forEach((p, i) => {
+    const el = document.createElement('div');
+    el.className = 'hero-box';
+    el.innerHTML = boxSVGs[i % boxSVGs.length];
+    el.style.left = p.left;
+    el.style.top = p.top;
+    el.style.width = p.size + 'px';
+    el.style.height = p.size + 'px';
+    el.style.animationDuration = p.duration + 's';
+    el.style.animationDelay = p.delay + 's';
+    container.appendChild(el);
+  });
+})();
+
+// ===== LIVE TICKING DASHBOARD =====
+(function() {
+  const ordersEl = document.getElementById('liveOrders');
+  const itemsEl  = document.getElementById('liveItems');
+  const shipEl   = document.getElementById('liveShipTime');
+  const onTimeEl = document.getElementById('liveOnTime');
+
+  // Simulate a day: 10K+ orders/month = ~350/day, start with morning progress
+  const now = new Date();
+  const hourOfDay = now.getHours() + now.getMinutes() / 60;
+  // Fulfillment ramps up 6am-6pm, slower at night
+  const dayProgress = Math.min(Math.max((hourOfDay - 6) / 14, 0.05), 1);
+  const dailyTarget = 380 + Math.floor(Math.random() * 60); // 380-440 orders/day
+  let orders = Math.floor(dailyTarget * dayProgress);
+  let items  = Math.floor(orders * 2.8 + Math.random() * 50); // ~2.8 items per order
+
+  function formatNum(n) {
+    return n.toLocaleString('en-US');
+  }
+
+  function tickEl(el) {
+    el.classList.add('num-tick');
+    setTimeout(() => el.classList.remove('num-tick'), 150);
+  }
+
+  // Initial display with count-up animation
+  let displayOrders = 0;
+  let displayItems = 0;
+  const countUpDuration = 1800;
+  const countUpStart = performance.now();
+
+  function countUp(timestamp) {
+    const elapsed = timestamp - countUpStart;
+    const progress = Math.min(elapsed / countUpDuration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    displayOrders = Math.floor(eased * orders);
+    displayItems = Math.floor(eased * items);
+    ordersEl.textContent = formatNum(displayOrders);
+    itemsEl.textContent = formatNum(displayItems);
+    if (progress < 1) {
+      requestAnimationFrame(countUp);
+    } else {
+      // Start live ticking after count-up
+      startLiveTick();
+    }
+  }
+  requestAnimationFrame(countUp);
+
+  function startLiveTick() {
+    // Tick orders every 3-8 seconds (realistic for 350+/day during work hours)
+    function tickOrders() {
+      const increment = Math.random() < 0.3 ? 2 : 1; // occasionally 2 at once
+      orders += increment;
+      items += increment * (2 + Math.floor(Math.random() * 3)); // 2-4 items per order
+      ordersEl.textContent = formatNum(orders);
+      tickEl(ordersEl);
+      setTimeout(() => {
+        itemsEl.textContent = formatNum(items);
+        tickEl(itemsEl);
+      }, 400 + Math.random() * 300);
+
+      // Occasionally fluctuate ship time and on-time
+      if (Math.random() < 0.15) {
+        const shipTimes = ['1.6d', '1.7d', '1.8d', '1.9d', '1.8d'];
+        shipEl.textContent = shipTimes[Math.floor(Math.random() * shipTimes.length)];
+      }
+      if (Math.random() < 0.1) {
+        const rates = ['98.1%', '98.2%', '98.3%', '98.4%', '98.2%'];
+        onTimeEl.textContent = rates[Math.floor(Math.random() * rates.length)];
+      }
+
+      const nextTick = 3000 + Math.random() * 5000;
+      setTimeout(tickOrders, nextTick);
+    }
+    // First tick after a short delay
+    setTimeout(tickOrders, 2000 + Math.random() * 3000);
+  }
+})();
+</script>
+<!-- ===== CLIENT PORTAL INTEGRATION ===== -->
+
+<!-- CLIENT PORTAL LINK -->
+<style>
+.portal-nav-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(184,142,71,.18);color:#c9a94e;border:1px solid rgba(184,142,71,.3);padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s}
+.portal-nav-btn:hover{background:rgba(184,142,71,.3);color:#e0c36a}
+.portal-dot{width:7px;height:7px;border-radius:50%;background:#c9a94e;display:inline-block}
+@media(max-width:768px){.portal-nav-btn{padding:6px 12px;font-size:12px}}
+</style>
+<script>
+(function(){
+  var nav=document.querySelector('.nav-links');
+  if(!nav)return;
+  var cta=document.querySelector('.nav-cta');
+  var btn=document.createElement('a');
+  btn.href='lakeside-client-portal.html';
+  btn.className='portal-nav-btn';
+  btn.innerHTML='<span class="portal-dot"></span> Client Portal';
+  if(cta)nav.insertBefore(btn,cta);
+  else nav.appendChild(btn);
+})();
+</script>
+
+</body>
+</html>
